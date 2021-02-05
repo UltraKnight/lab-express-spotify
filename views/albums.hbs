@@ -1,17 +1,19 @@
-{{!--name, image, button--}}
-{{#if albums.length}} {{!-- if are there any album ---}}
-<h1>Albums For {{albums.0.artists.0.name}} {{!-- so get the first artist name from the first album --}}
-{{/if}}
-<div class="row">
-{{#each albums}}
-    <div class="card border-0 mb-3" style="width: 18rem;">
-        {{#if this.images}}
-            <img src="{{images.0.url}}" class="card-img-top" alt="pic of {{name}}">
-        {{/if}}
-        <div class="card-body bg-secondary text-light d-flex flex-column align-items-center justify-content-end">
-            <h5 class="card-title">{{name}}</h5>
-            <a href="/tracks/{{id}}?albumName={{name}}" class="btn btn-danger p-1 w-auto">View tracks</a>
+<div class="container">
+    {{!--name, image, button--}}
+    {{#if albums.length}} {{!-- if are there any album ---}}
+    <h1>Albums For {{albums.0.artists.0.name}} {{!-- so get the first artist name from the first album --}}
+    {{/if}}
+    <div class="row">
+    {{#each albums}}
+        <div class="card border-0 mb-3" style="width: 18rem;">
+            {{#if this.images}}
+                <img src="{{images.0.url}}" class="card-img-top" alt="pic of {{name}}">
+            {{/if}}
+            <div class="card-body bg-secondary text-light d-flex flex-column align-items-center justify-content-end">
+                <h5 class="card-title">{{name}}</h5>
+                <a href="/tracks/{{id}}?albumName={{name}}" class="btn btn-danger p-1 w-auto">View tracks</a>
+            </div>
         </div>
+    {{/each}}
     </div>
-{{/each}}
 </div>
