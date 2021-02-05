@@ -1,0 +1,11 @@
+/* .container-fluid {
+    overflow-x: hidden;
+} */
+
+.full-page {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/spotify-background.jpeg');
+    background-size: contain;
+}

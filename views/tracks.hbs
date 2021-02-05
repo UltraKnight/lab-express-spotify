@@ -1,14 +1,17 @@
-{{#each tracks}}
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Preview</th>
-            <th>Listen</th>
-        </tr>
-        <tr>
-            <td>{{name}}</td>
-            <td><audio src="{{preview_url}}" controls></audio></td>
-            <td><a target="_blank" href={{external_urls.spotify}}>Open in Spotify</a></td>
-        </tr>
-    </table>
-{{/each}}
+<table class="p-0 m-0" style="width: 98vw;">
+    <tr class="fs-2 text-center bg-dark text-light">
+        <th colspan="3">Album - {{tracksAndAlbum.albumName}}</th>
+    </tr>
+    <tr class="fs-2 bg-secondary text-light">
+        <th class="w-50">Title</th>
+        <th>Preview</th>
+        <th>Listen</th>
+    </tr>
+    {{#each tracksAndAlbum.tracks}}
+    <tr>
+        <td class="w-50 fw-bold">{{name}}</td>
+        <td><audio src="{{preview_url}}" controls></audio></td>
+        <td><a class="link-success" target="_blank" href={{external_urls.spotify}}>Open in Spotify</a></td>
+    </tr>
+    {{/each}}
+</table>
