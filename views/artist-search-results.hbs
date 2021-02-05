@@ -1,0 +1,10 @@
+{{!--name, image, button--}}
+{{#each artists}}
+<div>
+{{#if this.images}}
+<img src="{{images.0.url}}" alt="" width="150">
+{{/if}}
+<h2>{{name}}</h2>
+<button><a href="/albums/{{id}}">View albums</a></button>
+</div>
+{{/each}}

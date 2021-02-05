@@ -1,0 +1,14 @@
+{{#each tracks}}
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Preview</th>
+            <th>Listen</th>
+        </tr>
+        <tr>
+            <td>{{name}}</td>
+            <td><audio src="{{preview_url}}" controls></audio></td>
+            <td><a target="_blank" href={{external_urls.spotify}}>Open in Spotify</a></td>
+        </tr>
+    </table>
+{{/each}}
