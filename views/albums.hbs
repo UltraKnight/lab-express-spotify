@@ -6,7 +6,7 @@
     <div class="row">
     {{#each albums}}
         <div class="card border-0 mb-3" style="width: 18rem;">
-            {{#if this.images}}
+            {{#if this.images.length}}
                 <img src="{{images.0.url}}" class="card-img-top" alt="pic of {{name}}">
             {{/if}}
             <div class="card-body bg-secondary text-light d-flex flex-column align-items-center justify-content-end">
